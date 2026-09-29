@@ -1,39 +1,27 @@
-# Hi, I'm Hlib Stepanov
+# Hlib Stepanov
 
-I build local-first AI systems that can be inspected, reproduced, and run on hardware you own. My work focuses on typed model decisions, RAG, autonomous agents, and the security boundaries needed when an LLM is allowed to use tools.
+Second-year software engineering student at Taras Shevchenko National University of Kyiv. I work on applied AI:
+agents that act on a computer under the user's control, search over private documents, and benchmarks that turn
+"it works" into a number.
 
-I'm based in Kyiv, Ukraine, and open to junior AI/ML, Python, and agent-engineering roles.
+Open to junior AI engineer roles and internships, remote. [LinkedIn](https://www.linkedin.com/in/hlib-stepanov-3536a437b) · stepanovgleb10@gmail.com
 
-## Start here
+## Projects
 
-### [vybir](https://github.com/Galactic717/vybir)
-
-Local AI that makes typed decisions and knows when to defer to a human. It runs Laya models on CPU or CUDA, adds split-conformal error guarantees, and includes small agents that learn Tetris, Snake, and 2048 from score alone.
-
-- 30 ms per decision on an RTX 3060 Laptop GPU
-- 183 tests and reproducible experiments on public datasets
-- Windows, Linux, and macOS; PyTorch and ONNX Runtime
-
-## Shipped projects
-
-| Project | What it does | Stack |
+| Project | What it is | Measured |
 |---|---|---|
-| [vybir](https://github.com/Galactic717/vybir) | Typed local-AI decisions with uncertainty guarantees and self-learning arcade agents | Python, PyTorch, ONNX, conformal prediction |
-| [Glossa](https://github.com/Galactic717/glossa) | Private document Q&A in 35 languages with page-level citations | Python, FastAPI, React, ChromaDB, Ollama |
-| [Halo Bot](https://github.com/Galactic717/halo-bot) | Local AI teammates with isolated workspaces, browsers, durable memory, and approval gates | TypeScript, Electron, Kotlin, Rust |
-| [skillrot](https://github.com/Galactic717/skillrot) | Zero-dependency auditor for AI-agent skill libraries and their context cost | Python |
-| [VaultDrop](https://github.com/Galactic717/VaultDrop) | Offline Windows backups with read-back verification of every file | Python, Rust, Tauri |
+| [Halo Bot](https://github.com/Galactic717/halo-bot) | Desktop app where AI assistants do real work on your PC, each in its own Windows sandbox, behind an approval gate and an audit log | On an 11-task benchmark a local 4B model went from 7 to 10 solved tasks ([PR #14](https://github.com/Galactic717/halo-bot/pull/14)) |
+| [Glossa](https://github.com/Galactic717/glossa) | Ask your documents a question and get the answer with the page it came from. 35 languages, runs offline | Retrieval pipeline in about 300 lines, no LangChain |
+| [vybir](https://github.com/Galactic717/vybir) | Runs an AI decision model on ordinary PCs and hands the cases it isn't sure about to a person | Per-class calibration cut spam that got through from 23.8% to 3.5%; 183 tests |
+| [skillrot](https://github.com/Galactic717/skillrot) | Shows how much of an AI agent's context its skill library takes up | Weekly CI audit of 5 public libraries |
+| [VaultDrop](https://github.com/Galactic717/VaultDrop) | Offline Windows backups that read back and verify every file | Installer and CLI in [v0.2.0](https://github.com/Galactic717/VaultDrop/releases/tag/v0.2.0) |
+| [RoadForge](https://github.com/Galactic717/roadforge) | Self-driving demo on real OpenStreetMap roads, in the browser | [Live demo](https://galactic717.github.io/roadforge/); 0 collisions in 20 benchmark runs |
 
-## Also exploring
+Right now I'm training my own 158M-parameter language model from scratch on Ukrainian, English and code.
+That repo stays private until a checkpoint is worth sharing.
 
-- [NEXUS-G4 / Venator](https://github.com/Galactic717/NEXUS-G4) — a LangGraph research agent for PubMed, technical search, and OSINT.
-- [Local AI Core / Aether](https://github.com/Galactic717/Local-AI-Core) — a local router for LLM, speech, and image models.
+## How I work
 
-## What I care about
-
-- Local-first software and user privacy
-- Agent sandboxing, approvals, and prompt-injection resistance
-- Reproducible evaluation rather than demo-only claims
-- Useful interfaces around open models
-
-[LinkedIn](https://www.linkedin.com/in/hlib-stepanov-3536a437b)
+I write code together with AI coding agents (Claude Code, Codex) and hold it to the same bar as anything else:
+tests, CI, and a benchmark before I call a change an improvement. The numbers above come from those tests and
+benchmarks, not from estimates.
